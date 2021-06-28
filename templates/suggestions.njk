@@ -1,0 +1,34 @@
+{% extends "clubBase.njk" %}
+
+{% block mainInfo %}
+	<title>Vr Club - Suggestion</title>
+{% endblock %}
+
+{% block content %}
+ <header>
+            <h1>Suggestion</h1>
+            <h3>Send Us your suggestions</h3>
+        </header>
+     <form class="form" method="post" action="./apply">
+
+           <label for="name">Movie Name:</label>
+           <input id="name" type="name" name="user_name" required>
+           <label for="email"> your Email:</label>
+           <input type="email" id="email" name="user_email" required>
+           <label for="password">password:</label>
+           <input type="password" id="password" name="user_pass" placeholder="password" required>
+           <br><br>
+
+
+           <label for="select">Rating:</label>
+           <select name="user_familarity" id="familarity">
+               <option value="lame">lame</option>
+               <option value="Good">Good</option>
+               <option value="Classic">Classic</option>
+
+
+
+           </select>
+           <button id="apply" type="submit">Send!</button>
+       </form>
+{% endblock %}

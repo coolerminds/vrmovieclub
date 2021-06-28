@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    {% block mainInfo %}
+
+        <title>Vr Movie Club of Tracy </title>
+            
+    {% endblock %}
+        
+        <script src="eventData.js"></script>
+        <link href="club.css" rel="stylesheet">
+    </head>
+<header class="header">
+    {% if user and user.loggedin %}
+        {% if user.role == 'member' %}
+            <nav class="nav" id"nav-user">
+                    <ul>
+                        <li><a href="./">Home</a></li>
+                        <li><a href="./activities" class ="act">activities</a></li>
+                        <li><a href="./add">Add Activity </a></li>
+                        <li><a href="./logout" class="logout"> Log Out</a></li>
+                        <h1 class="main-title" id="title"> {{user.firstName}}</h1>
+                    </ul>
+            </nav>
+        {% else %}
+            <nav class="nav" id="nav-user">
+                <ul>
+                    <li><a href="./">Home</a></li>
+                    <li><a href="./activities" class ="act">activities</a></li>
+                    <li><a href="./add">Add Activity </a></li>
+                    <li><a href="./users">Users</a></li>
+                    <li><a href="./logout" class="logout">Log Out</a></li>
+                <h1 class="main-title" id="title"> {{user.firstName}}, {{user.role}}</h1>
+                </ul>
+            </nav>
+        {% endif %}
+    {% else %}    
+        <nav class="nav">
+            <ul>
+                <li><a href="./">Home</a></li>
+                <li><a href="./#watch" class="nav-link">Watch List</a></li>
+                <li><a href="./login" class="login"> Login</a></li>
+                <li><a href="./member" class ="video">Sign Up</a></li>
+                <li><a href="./activities" class ="act">activities</a></li>
+            </ul>
+            <h1 class="main-title" id="title"> Vr Movie Club of Tracy </h1>
+        </nav>
+    {% endif %}
+</header>
+
+
+
+   
+
+
+    <body>
+        <main class"main" id="top">
+            <article class="main-content" id="main">
+            {% block content %} 
+
+            {% endblock %}
+           
+            {% block script %}
+                
+            {% endblock %}
+            </article>
+        </main>
+            <footer>
+                <nav class="footer"><a href="#top">Top</a>
+                        <small>Created by Harjot Singh</small> 2021
+                </nav>
+            </footer>
+    </body>
+</html>
+

@@ -1,0 +1,26 @@
+{
+    "name": "jatt",
+    "version": "2.2.2",
+    "description": "something making up",
+    "main": "/clubServer/deployTest.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Harjot",
+    "license": "ISC",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "express": "^4.17.1",
+        "express-session": "^1.17.1",
+        "gray-matter": "^4.0.2",
+        "json": "^10.0.0",
+        "nunjucks": "^3.2.2",
+        "picomatch": "^2.2.2"
+    },
+    "devDependencies": {},
+    "keywords": [],
+    "repository": {
+        "type": "git",
+        "url": "^C"
+    }
+}

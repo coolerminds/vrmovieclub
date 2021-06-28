@@ -1,0 +1,19 @@
+{% extends "clubBase.njk" %}
+
+{% block mainInfo %}
+    <title>Hey User! </title>
+{% endblock %}
+
+{% block content %}
+    
+    <header><h1>Hey, {{userIn.user_email}} </h1> </header>
+      <h1>Welcome {{user.firstName}} {{user.lastName}}</h1>
+  <h3>Your email: {{user.email}}</h3>
+  <h3>Your role: {{user.role}}</h3>
+
+    <h1> Welcome!</h1>
+
+<nav><a href="./logout">logout?</a>
+                        
+                </nav>
+{% endblock %}

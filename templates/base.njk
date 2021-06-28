@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> {% block mainInfo %}
+    <title>Vr Movie Club {{data.title}}</title>
+    {% endblock %}
+    <link href="club.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fefbd8;
+            margin-top: 10em;
+        }
+        
+        .title {
+            margin-left: 4em;
+            background-color: #80ced6;
+        }
+        
+        h2 {
+            margin-left: 4em;
+            background-color: #b90028;
+        }
+        
+        h3 {
+            margin-left: 4em;
+            background-color: #2aaa0a;
+        }
+        
+        div {
+            background-color: #d5f4e6;
+        }
+        
+        .nav {
+            background-color: white;
+        }
+        
+        p {
+            margin-left: 3em;
+        }
+    </style>
+</head>
+<header class="header">
+    <nav class="nav">
+        <ul>
+            <li><a href="./">Home</a></li>
+            <li><a href="./#watch" class="nav-link">Watch List</a></li>
+            <li><a href="./suggestions" class="sugesstion"> Movie Suggestions</a></li>
+
+            <li><a href="./login" class="login"> Login</a></li>
+            <li><a href="./member" class="video">Member</a></li>
+            <li><a href="./activities" class="act">activities</a></li>
+        </ul>
+
+
+        <h1 class="main-title" id="title"> Vr Movie Club of Tracy </h1>
+</header>
+
+<body>
+    <main>
+        {% block content %}
+        <h1 class="title">Hi from {{name}}
+            <h1>
+                <h2>netID: {{netId}}
+                    <h2>
+                        <h3>This page has been visited {{count}} times
+                            <h3>
+                                {% endblock %}
+    </main>
+    <footer>
+        <p>Harjot Singh</p>
+    </footer>
+</body>
+
+</html>

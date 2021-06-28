@@ -1,0 +1,19 @@
+{% extends "clubBase.njk" %}
+
+{% block mainInfo %}
+	<title>Sign Up</title>
+{% endblock %}
+
+{% block content %}
+
+   <header>
+         <h1>Thank You For Signing Up!</h1>
+         {% for member in members %}
+            <h3>Name</h3>
+            <p>{{member.user_name}}</p>
+            <h3>Email</h3>
+            <p>{{member.user_email}}</p>
+         {% endfor %}
+   </header>
+       
+{% endblock %}

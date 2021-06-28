@@ -1,0 +1,54 @@
+{% extends "clubBase.njk" %}
+
+ {% block mainInfo %}
+    <title> Vr Movie Club - Index </title>
+
+{% endblock %}
+
+{% block content %}
+                <div class="title-photo">
+                <img class="main-photo" src="imgs/head.png" alt="Vr Head Set">
+            </div>
+            <section id="top"></section>
+            <h2>Welcome to the Club website</h2>
+            <p>This website will be used to list the watch list for the club and include links to Vr movie theathers so we can enjoy the movies with other members. We will also be giving our opinions and voting on future films </p>
+        </article>
+        <section class="watch-list" id="watch">
+            <h2 class="movie">Past Movie Watched List</h2>
+            <h5>Movie title - Director - Screening Time </h5>
+            <h6>Lost In Translation - Dir. Sofia Chopla - November 10, 2020 at 3:30 pm PST - <a class="vcr" href="http://www.google.com">Trailer </a> </h6>
+            <h6>The GodFather - Dir. Francis Ford Chopla - November 20, 2020 at 3:30 pm PST - <a class="vcr" href="http://www.google.com">Trailer </a> </h6>
+            <h6>Spirited Away - Dir. Hayao Miyazaki - November 23, 2020 at 3:30 pm PST - <a class="vcr" href="http://www.google.com">Trailer</a> </h6>
+            <h6>Paths Of Glory - Dir. Stanley Kubrick - November 25, 2020 at 6:00 pm PST - <a class="vcr" href="http://www.google.com">Trailer</a> </h6>
+            <h6>The Good, the Bad and the Ugly - Dir. Sergio Leone - November 27, 2020 at 4:30 pm PST - <a class="vcr" href="http://www.google.com">Trailer</a> </h6>
+            <h6>SpiderMan: Into the Spider Verse 3D - Dir. Rodney Rothman... - Nov. 30, 2020 at 5:30 pm PST - <a class="vcr" href="http://www.google.com">Trailer</a> </h6>
+        </section>
+        <section class="club-talk" id="talk">
+            <h2 class="popcorn">Club Talk</h2>
+            <h5>Different Chat groups for Vr Club help</h5>
+            <h6>Technical Problems and Trouble sorting - Reach out on Reddit <a href="http://www.google.com"> Here </a> </h6>
+            <h6>Movie Talk - on Facebook Page <a href="http://www.google.com"> Here </a> </h6>
+            <h6>Off Topic Convo - on Discourse <a href="#talk"> Here</a></h6>
+        </section>
+
+        <h2 class="film"> Upcoming Movie show times </h2>
+            <h2>Schedule</h2>
+        <table id = "activitiesTable">
+		{%for activity in activities %}
+			<tr>
+            <td>{{activity.name}} </td>
+            <td>{{activity.dates}}</td>
+            <td>{{activity.description}}</td>
+            </tr>
+		{% endfor %}
+        </table>
+    
+            
+<script>
+        let table = document.getElementById("activitiesTable");
+        let thead = document.createElement("thead");
+        let headData = `<tr><td>Name</td><td>Date</td><td>Description</td></tr>`;
+        thead.innerHTML = headData;
+        table.appendChild(thead);  
+ </script>
+{% endblock %}

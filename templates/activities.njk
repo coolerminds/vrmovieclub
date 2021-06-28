@@ -1,0 +1,33 @@
+{% extends "clubBase.njk" %}
+
+{% block mainInfo %}
+	<title>Activities</title>
+{% endblock %}
+
+{% block content %}
+ <header>
+            <h2 class="film"> Movie show times </h2>
+            <h2>Schedule</h2>
+        </header>
+        <table id = "activitiesTable">
+		{%for activity in activities %}
+			<tr>
+            <td>{{activity.name}} </td>
+            <td>{{activity.dates}}</td>
+            <td>{{activity.description}}</td>
+            </tr>
+		{% endfor %}
+        </table>
+        <p>More Movies coming soon....</p>
+       <nav class="footer"><a href="./add">add activities</a>
+                        
+                </nav>
+
+<script>
+        let table = document.getElementById("activitiesTable");
+        let thead = document.createElement("thead");
+        let headData = `<tr><td>Name</td><td>Date</td><td>Description</td></tr>`;
+        thead.innerHTML = headData;
+        table.appendChild(thead);  
+    </script>
+{% endblock %}

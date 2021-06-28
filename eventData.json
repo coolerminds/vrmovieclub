@@ -1,0 +1,23 @@
+ [{
+         "name": "Lost In Translation",
+         "dates": ["November 10th", "March 24th"],
+         "description": ["Comedy Movie"],
+         "votes": "102",
+         "rating": "5/5"
+
+     },
+     {
+         "name": "The God Father",
+         "dates": ["November 20th", "July 25th"],
+         "description": ["Gangster Film"],
+         "votes": "102",
+         "rating": "5/5"
+     },
+     {
+         "name": "Spirited Away",
+         "dates": ["Sundays in July", "August"],
+         "description": ["Animated Movie"],
+         "votes": "102",
+         "rating": "5/5"
+     }
+ ]

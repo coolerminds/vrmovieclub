@@ -1,0 +1,31 @@
+{% extends "clubBase.njk" %}
+
+{% block mainInfo %}
+
+        <title> Vr Movie Club - Login </title>
+
+{% endblock %}
+
+{% block content %}
+
+
+   
+        <div class="title-photo">
+            <img class="main-photo" src="imgs/c-in.png" alt="Vr Head Set">
+        </div>
+        <h1> Member Login </h1>
+        
+         <form class="grid-container" action="./login" method="post">
+    <label>Email</label>
+    <input type="email" id="Email" name="email" placeholder="Email" required>
+
+    <label>Password</label>
+    <input type="password" id="Password" name="password" placeholder="Password" minlength="7" maxlength="20" required>
+
+    <button type="submit" id="LoginButton" class="ClickTarget">Login</button>
+  </form>
+</h3> test login info: </h3>
+<p>email:umbrate1989@yahoo.com </p>
+<p>password:<h3>n3pLS4|=</h3> </p>
+{% endblock %}
+

@@ -1,0 +1,39 @@
+{% extends "clubBase.njk" %}
+
+{% block mainInfo %}
+	<title>Vr Club - Membership</title>
+{% endblock %}
+
+{% block content %}
+ <header>
+            <h1>Membership</h1>
+        </header> 
+        <section id="dialog">
+    <h3>You Have signed up!</h3>
+    <section id="user"></section>
+    <button class="red">Close!</button>
+  </section>
+     <form class="form" method="post" action="./apply">
+
+           <label for="name">Name:</label>
+           <input id="name" type="name" name="user_name" required>
+           <label for="email">Email:</label>
+           <input type="email" id="email" name="user_email" required>
+           <label for="password">password:</label>
+           <input type="password" id="password" name="user_pass" placeholder="password" required>
+           <br><br>
+
+
+           <label for="select">Movie Level:</label>
+           <select name="user_familarity" id="familarity">
+               <option value="cool">cool</option>
+               <option value="amazing">amazing</option>
+               <option value="OMG">Wes Anderson</option>
+</select>
+<label>Comments</label>
+    <textarea id="Comments" name="comments" rows="5" cols="40" placeholder="Type comment here..."></textarea>
+
+           
+           <button id="apply" type="submit">SignUp!</button>
+       </form>
+{% endblock %}

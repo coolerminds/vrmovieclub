@@ -1,0 +1,20 @@
+{% extends "clubBase.njk" %}
+
+{% block mainInfo %}
+	<title>Add an Activity</title>
+{% endblock %}
+
+{% block content %}
+<h2 class="film"> Add a New Movie Acctivity</h2>
+<section>
+	<form action="./addact" method="get">
+	<div>
+		<label>Activity Name</label><input type="text" name="activity_name"/>
+		<label>Activity Date</label><input type="date" name="activity_date" />
+		<label>Activity Description</label><input type="text" name="activity_description" />
+	</div>
+
+	<div><button type="submit">Submit</button></div>
+	</form>
+</section>
+{% endblock %}
